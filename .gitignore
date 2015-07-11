@@ -1,0 +1,11 @@
+.DS_Store
+xcuserdata
+DerivedData
+buildTag.h
+xcshareddata
+build.sh
+distribution
+inhouse-build.sh
+ipa-build.sh
+md-build.sh
+model-helper
