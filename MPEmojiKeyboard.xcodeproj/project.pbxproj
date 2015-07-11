@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C93821511B510FDC0036E216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821501B510FDC0036E216 /* main.m */; };
+		C93821541B510FDC0036E216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821531B510FDC0036E216 /* AppDelegate.m */; };
+		C93821571B510FDC0036E216 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821561B510FDC0036E216 /* ViewController.m */; };
+		C938215A1B510FDC0036E216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93821581B510FDC0036E216 /* Main.storyboard */; };
+		C938215C1B510FDC0036E216 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C938215B1B510FDC0036E216 /* Images.xcassets */; };
+		C938215F1B510FDC0036E216 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C938215D1B510FDC0036E216 /* LaunchScreen.xib */; };
+		C938216B1B510FDC0036E216 /* MPEmojiKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C938216A1B510FDC0036E216 /* MPEmojiKeyboardTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C93821651B510FDC0036E216 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C93821431B510FDC0036E216 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C938214A1B510FDC0036E216;
+			remoteInfo = MPEmojiKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C938214B1B510FDC0036E216 /* MPEmojiKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPEmojiKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C938214F1B510FDC0036E216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C93821501B510FDC0036E216 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C93821521B510FDC0036E216 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C93821531B510FDC0036E216 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C93821551B510FDC0036E216 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C93821561B510FDC0036E216 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C93821591B510FDC0036E216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C938215B1B510FDC0036E216 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C938215E1B510FDC0036E216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C93821641B510FDC0036E216 /* MPEmojiKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MPEmojiKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93821691B510FDC0036E216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C938216A1B510FDC0036E216 /* MPEmojiKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPEmojiKeyboardTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C93821481B510FDC0036E216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C93821611B510FDC0036E216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C93821421B510FDC0036E216 = {
+			isa = PBXGroup;
+			children = (
+				C938214D1B510FDC0036E216 /* MPEmojiKeyboard */,
+				C93821671B510FDC0036E216 /* MPEmojiKeyboardTests */,
+				C938214C1B510FDC0036E216 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C938214C1B510FDC0036E216 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C938214B1B510FDC0036E216 /* MPEmojiKeyboard.app */,
+				C93821641B510FDC0036E216 /* MPEmojiKeyboardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C938214D1B510FDC0036E216 /* MPEmojiKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C93821521B510FDC0036E216 /* AppDelegate.h */,
+				C93821531B510FDC0036E216 /* AppDelegate.m */,
+				C93821551B510FDC0036E216 /* ViewController.h */,
+				C93821561B510FDC0036E216 /* ViewController.m */,
+				C93821581B510FDC0036E216 /* Main.storyboard */,
+				C938215B1B510FDC0036E216 /* Images.xcassets */,
+				C938215D1B510FDC0036E216 /* LaunchScreen.xib */,
+				C938214E1B510FDC0036E216 /* Supporting Files */,
+			);
+			path = MPEmojiKeyboard;
+			sourceTree = "<group>";
+		};
+		C938214E1B510FDC0036E216 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C938214F1B510FDC0036E216 /* Info.plist */,
+				C93821501B510FDC0036E216 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C93821671B510FDC0036E216 /* MPEmojiKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				C938216A1B510FDC0036E216 /* MPEmojiKeyboardTests.m */,
+				C93821681B510FDC0036E216 /* Supporting Files */,
+			);
+			path = MPEmojiKeyboardTests;
+			sourceTree = "<group>";
+		};
+		C93821681B510FDC0036E216 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C93821691B510FDC0036E216 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C938214A1B510FDC0036E216 /* MPEmojiKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C938216E1B510FDC0036E216 /* Build configuration list for PBXNativeTarget "MPEmojiKeyboard" */;
+			buildPhases = (
+				C93821471B510FDC0036E216 /* Sources */,
+				C93821481B510FDC0036E216 /* Frameworks */,
+				C93821491B510FDC0036E216 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MPEmojiKeyboard;
+			productName = MPEmojiKeyboard;
+			productReference = C938214B1B510FDC0036E216 /* MPEmojiKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C93821631B510FDC0036E216 /* MPEmojiKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C93821711B510FDC0036E216 /* Build configuration list for PBXNativeTarget "MPEmojiKeyboardTests" */;
+			buildPhases = (
+				C93821601B510FDC0036E216 /* Sources */,
+				C93821611B510FDC0036E216 /* Frameworks */,
+				C93821621B510FDC0036E216 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C93821661B510FDC0036E216 /* PBXTargetDependency */,
+			);
+			name = MPEmojiKeyboardTests;
+			productName = MPEmojiKeyboardTests;
+			productReference = C93821641B510FDC0036E216 /* MPEmojiKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C93821431B510FDC0036E216 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = MacPu;
+				TargetAttributes = {
+					C938214A1B510FDC0036E216 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					C93821631B510FDC0036E216 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = C938214A1B510FDC0036E216;
+					};
+				};
+			};
+			buildConfigurationList = C93821461B510FDC0036E216 /* Build configuration list for PBXProject "MPEmojiKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C93821421B510FDC0036E216;
+			productRefGroup = C938214C1B510FDC0036E216 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C938214A1B510FDC0036E216 /* MPEmojiKeyboard */,
+				C93821631B510FDC0036E216 /* MPEmojiKeyboardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C93821491B510FDC0036E216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C938215A1B510FDC0036E216 /* Main.storyboard in Resources */,
+				C938215F1B510FDC0036E216 /* LaunchScreen.xib in Resources */,
+				C938215C1B510FDC0036E216 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C93821621B510FDC0036E216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C93821471B510FDC0036E216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C93821571B510FDC0036E216 /* ViewController.m in Sources */,
+				C93821541B510FDC0036E216 /* AppDelegate.m in Sources */,
+				C93821511B510FDC0036E216 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C93821601B510FDC0036E216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C938216B1B510FDC0036E216 /* MPEmojiKeyboardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C93821661B510FDC0036E216 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C938214A1B510FDC0036E216 /* MPEmojiKeyboard */;
+			targetProxy = C93821651B510FDC0036E216 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C93821581B510FDC0036E216 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C93821591B510FDC0036E216 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C938215D1B510FDC0036E216 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C938215E1B510FDC0036E216 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C938216C1B510FDC0036E216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C938216D1B510FDC0036E216 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C938216F1B510FDC0036E216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MPEmojiKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C93821701B510FDC0036E216 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MPEmojiKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C93821721B510FDC0036E216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MPEmojiKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MPEmojiKeyboard.app/MPEmojiKeyboard";
+			};
+			name = Debug;
+		};
+		C93821731B510FDC0036E216 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MPEmojiKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MPEmojiKeyboard.app/MPEmojiKeyboard";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C93821461B510FDC0036E216 /* Build configuration list for PBXProject "MPEmojiKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C938216C1B510FDC0036E216 /* Debug */,
+				C938216D1B510FDC0036E216 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C938216E1B510FDC0036E216 /* Build configuration list for PBXNativeTarget "MPEmojiKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C938216F1B510FDC0036E216 /* Debug */,
+				C93821701B510FDC0036E216 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C93821711B510FDC0036E216 /* Build configuration list for PBXNativeTarget "MPEmojiKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C93821721B510FDC0036E216 /* Debug */,
+				C93821731B510FDC0036E216 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C93821431B510FDC0036E216 /* Project object */;
+}
