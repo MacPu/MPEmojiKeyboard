@@ -14,6 +14,9 @@
 		C938215C1B510FDC0036E216 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C938215B1B510FDC0036E216 /* Images.xcassets */; };
 		C938215F1B510FDC0036E216 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C938215D1B510FDC0036E216 /* LaunchScreen.xib */; };
 		C938216B1B510FDC0036E216 /* MPEmojiKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C938216A1B510FDC0036E216 /* MPEmojiKeyboardTests.m */; };
+		C938217A1B51196C0036E216 /* MPEmojiKeyboardKeyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821791B51196C0036E216 /* MPEmojiKeyboardKeyItem.m */; };
+		C938217D1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C938217C1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m */; };
+		C93821801B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C938217F1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		C93821641B510FDC0036E216 /* MPEmojiKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MPEmojiKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93821691B510FDC0036E216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C938216A1B510FDC0036E216 /* MPEmojiKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPEmojiKeyboardTests.m; sourceTree = "<group>"; };
+		C93821781B51196C0036E216 /* MPEmojiKeyboardKeyItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardKeyItem.h; path = MPEmojiKeyboard/MPEmojiKeyboardKeyItem.h; sourceTree = "<group>"; };
+		C93821791B51196C0036E216 /* MPEmojiKeyboardKeyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardKeyItem.m; path = MPEmojiKeyboard/MPEmojiKeyboardKeyItem.m; sourceTree = "<group>"; };
+		C938217B1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardKeyGroup.h; path = MPEmojiKeyboard/MPEmojiKeyboardKeyGroup.h; sourceTree = "<group>"; };
+		C938217C1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardKeyGroup.m; path = MPEmojiKeyboard/MPEmojiKeyboardKeyGroup.m; sourceTree = "<group>"; };
+		C938217E1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardKeysFlowLayout.h; path = MPEmojiKeyboard/MPEmojiKeyboardKeysFlowLayout.h; sourceTree = "<group>"; };
+		C938217F1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardKeysFlowLayout.m; path = MPEmojiKeyboard/MPEmojiKeyboardKeysFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,7 @@
 		C938214D1B510FDC0036E216 /* MPEmojiKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				C93821741B51178D0036E216 /* MPEmojiKeyboard */,
 				C93821521B510FDC0036E216 /* AppDelegate.h */,
 				C93821531B510FDC0036E216 /* AppDelegate.m */,
 				C93821551B510FDC0036E216 /* ViewController.h */,
@@ -117,6 +127,19 @@
 				C93821691B510FDC0036E216 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C93821741B51178D0036E216 /* MPEmojiKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C93821781B51196C0036E216 /* MPEmojiKeyboardKeyItem.h */,
+				C93821791B51196C0036E216 /* MPEmojiKeyboardKeyItem.m */,
+				C938217B1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.h */,
+				C938217C1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m */,
+				C938217E1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.h */,
+				C938217F1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m */,
+			);
+			name = MPEmojiKeyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +243,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C93821571B510FDC0036E216 /* ViewController.m in Sources */,
+				C938217D1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m in Sources */,
+				C938217A1B51196C0036E216 /* MPEmojiKeyboardKeyItem.m in Sources */,
 				C93821541B510FDC0036E216 /* AppDelegate.m in Sources */,
+				C93821801B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m in Sources */,
 				C93821511B510FDC0036E216 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
