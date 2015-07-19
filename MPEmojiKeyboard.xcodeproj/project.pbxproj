@@ -17,6 +17,7 @@
 		C938217A1B51196C0036E216 /* MPEmojiKeyboardKeyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821791B51196C0036E216 /* MPEmojiKeyboardKeyItem.m */; };
 		C938217D1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C938217C1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m */; };
 		C93821801B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C938217F1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m */; };
+		C999C0601B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C999C05F1B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		C938217C1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardKeyGroup.m; path = MPEmojiKeyboard/MPEmojiKeyboardKeyGroup.m; sourceTree = "<group>"; };
 		C938217E1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardKeysFlowLayout.h; path = MPEmojiKeyboard/MPEmojiKeyboardKeysFlowLayout.h; sourceTree = "<group>"; };
 		C938217F1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardKeysFlowLayout.m; path = MPEmojiKeyboard/MPEmojiKeyboardKeysFlowLayout.m; sourceTree = "<group>"; };
+		C999C05E1B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardKeyCell.h; path = MPEmojiKeyboard/MPEmojiKeyboardKeyCell.h; sourceTree = "<group>"; };
+		C999C05F1B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardKeyCell.m; path = MPEmojiKeyboard/MPEmojiKeyboardKeyCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				C938217C1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m */,
 				C938217E1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.h */,
 				C938217F1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m */,
+				C999C05E1B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.h */,
+				C999C05F1B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.m */,
 			);
 			name = MPEmojiKeyboard;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			files = (
 				C93821571B510FDC0036E216 /* ViewController.m in Sources */,
 				C938217D1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m in Sources */,
+				C999C0601B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.m in Sources */,
 				C938217A1B51196C0036E216 /* MPEmojiKeyboardKeyItem.m in Sources */,
 				C93821541B510FDC0036E216 /* AppDelegate.m in Sources */,
 				C93821801B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m in Sources */,
@@ -442,6 +448,7 @@
 				C93821701B510FDC0036E216 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C93821711B510FDC0036E216 /* Build configuration list for PBXNativeTarget "MPEmojiKeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +457,7 @@
 				C93821731B510FDC0036E216 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
