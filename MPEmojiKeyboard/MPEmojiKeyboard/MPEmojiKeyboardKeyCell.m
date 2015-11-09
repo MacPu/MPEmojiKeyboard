@@ -66,4 +66,14 @@
     }
 }
 
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    [self.subviews enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop) {
+        if ([obj respondsToSelector:@selector(setSelected:)]) {
+            [((id)obj) setSelected:selected];
+        }
+    }];
+}
+
 @end
