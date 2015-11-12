@@ -11,7 +11,7 @@
 
 @interface MPEmojiKeyboardKeyCell()
 
-@property (nonatomic, strong) UIButton *keyButton;
+@property (nonatomic, weak, readwrite) UIButton *keyButton;
 
 @end
 

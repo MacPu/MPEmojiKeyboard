@@ -13,5 +13,6 @@
 @interface MPEmojiKeyboardKeyCell : UICollectionViewCell
 
 @property (nonatomic, strong) MPEmojiKeyboardKeyItem *keyItem;
+@property (nonatomic, weak, readonly) UIButton *keyButton;
 
 @end
