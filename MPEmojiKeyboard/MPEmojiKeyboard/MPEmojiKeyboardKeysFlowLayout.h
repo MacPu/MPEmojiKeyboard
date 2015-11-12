@@ -10,6 +10,7 @@
 
 @interface MPEmojiKeyboardKeysFlowLayout : UICollectionViewLayout
 
+@property (nonatomic, assign) CGSize  itemSize;
 @property (nonatomic, assign) CGFloat lineSpacing;
 @property (nonatomic, assign) CGFloat itemSpacing;
 
