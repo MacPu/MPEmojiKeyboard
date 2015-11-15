@@ -28,45 +28,59 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        [self addSubview:backgroundImageView];
-        self.backgroundImageView = backgroundImageView;
-        
-        UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0,
-                                                                                     CGRectGetHeight(self.bounds) - kDefaultPageControlHeight,
-                                                                                     CGRectGetWidth(self.bounds),
-                                                                                     kDefaultPageControlHeight)];
-        pageControl.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-        pageControl.userInteractionEnabled = NO;
-        pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
-        pageControl.pageIndicatorTintColor = [UIColor whiteColor];
-        [self addSubview:pageControl];
-        self.pageControl = pageControl;
-        
-        UICollectionViewLayout *layout = [[UICollectionViewLayout alloc] init];
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0,
-                                                                                              0,
-                                                                                              CGRectGetWidth(self.bounds),
-                                                                                              CGRectGetHeight(self.bounds) - kDefaultPageControlHeight)
-                                                              collectionViewLayout:layout];
-        collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        collectionView.delegate = self;
-        collectionView.dataSource = self;
-        collectionView.backgroundColor = [UIColor clearColor];
-        collectionView.pagingEnabled = YES;
-        collectionView.showsHorizontalScrollIndicator = NO;
-        collectionView.showsVerticalScrollIndicator = NO;
-        [self addSubview:collectionView];
-        self.collectionView = collectionView;
-        
-        UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(collectionViewLongPress:)];
-        longPressGestureRecognizer.minimumPressDuration = 0.05;
-        [self.collectionView addGestureRecognizer:longPressGestureRecognizer];
-        self.longPressGesture = longPressGestureRecognizer;
-        
+        [self commonInit];
     }
     return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void)commonInit
+{
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self addSubview:backgroundImageView];
+    self.backgroundImageView = backgroundImageView;
+    
+    UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0,
+                                                                                 CGRectGetHeight(self.bounds) - kDefaultPageControlHeight,
+                                                                                 CGRectGetWidth(self.bounds),
+                                                                                 kDefaultPageControlHeight)];
+    pageControl.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+    pageControl.userInteractionEnabled = NO;
+    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+    [self addSubview:pageControl];
+    self.pageControl = pageControl;
+    
+    UICollectionViewLayout *layout = [[UICollectionViewLayout alloc] init];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0,
+                                                                                          0,
+                                                                                          CGRectGetWidth(self.bounds),
+                                                                                          CGRectGetHeight(self.bounds) - kDefaultPageControlHeight)
+                                                          collectionViewLayout:layout];
+    collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    collectionView.delegate = self;
+    collectionView.dataSource = self;
+    collectionView.backgroundColor = [UIColor clearColor];
+    collectionView.pagingEnabled = YES;
+    collectionView.showsHorizontalScrollIndicator = NO;
+    collectionView.showsVerticalScrollIndicator = NO;
+    [self addSubview:collectionView];
+    self.collectionView = collectionView;
+    
+    UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(collectionViewLongPress:)];
+    longPressGestureRecognizer.minimumPressDuration = 0.05;
+    [self.collectionView addGestureRecognizer:longPressGestureRecognizer];
+    self.longPressGesture = longPressGestureRecognizer;
+    
 }
 
 - (void)setKeyGroup:(MPEmojiKeyboardKeyGroup *)keyGroup
