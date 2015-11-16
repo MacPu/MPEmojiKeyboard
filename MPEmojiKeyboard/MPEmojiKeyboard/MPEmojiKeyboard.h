@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MPEmojiKeyboardKeyGroup.h"
+#import "MPEmojiKeyboardKeyItem.h"
 
-@class MPEmojiKeyboardKeyGroup;
 @class MPEmojiKeyboardKeyCell;
 
 typedef void(^MPKeyItemGroupPressedKeyChangedBlock)(MPEmojiKeyboardKeyGroup *keyItemsGroup, MPEmojiKeyboardKeyCell *fromCell, MPEmojiKeyboardKeyCell *toCell);
