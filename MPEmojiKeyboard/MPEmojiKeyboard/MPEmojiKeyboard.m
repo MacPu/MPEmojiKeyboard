@@ -44,6 +44,15 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self commonInit];
+    }
+    return  self;
+}
+
 - (void)commonInit
 {
     if (CGRectIsEmpty(self.bounds)) {
@@ -197,18 +206,19 @@
 
 #pragma mark - KeyItems
 
-- (void)setKeyItemGroups:(NSArray *)keyItemGroups
+- (void)setKeysGroups:(NSArray *)keysGroups
 {
-    _keysGroups = [keyItemGroups copy];
+    _keysGroups = [keysGroups copy];
     [self reloadKeyItemGroupViews];
-    self.toolsView.keyItemGroups = keyItemGroups;
+    self.toolsView.keyItemGroups = keysGroups;
+    
 }
 
 - (void)reloadKeyItemGroupViews
 {
     [self.keyItemGroupViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
-    __weak __typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     self.keyItemGroupViews = nil;
     NSMutableArray *keyItemGroupViews = [NSMutableArray array];
     [self.keysGroups enumerateObjectsUsingBlock:^(MPEmojiKeyboardKeyGroup *obj, NSUInteger idx, BOOL *stop) {

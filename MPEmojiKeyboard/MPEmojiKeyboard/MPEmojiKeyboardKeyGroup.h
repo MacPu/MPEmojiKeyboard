@@ -16,6 +16,6 @@
 @property (nonatomic, strong) UIImage *selectIconImage;
 @property (nonatomic, strong) NSArray *keyItems;
 @property (nonatomic, strong) UICollectionViewLayout *keyItemsLayout;
-@property (nonatomic, unsafe_unretained) id keyItemCellClass;
+@property (nonatomic, unsafe_unretained) Class keyItemCellClass;
 
 @end
