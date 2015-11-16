@@ -16,7 +16,7 @@ typedef void(^MPSendKeyClickedBlock)(void);
 
 @interface MPEmojiKeyboard : UIView
 
-@property (nonatomic, strong) NSArray *itemKeysGroups;
+@property (nonatomic, strong) NSArray *keysGroups;
 @property (nonatomic, assign) BOOL enableStandardSystemKeyboardClickSound;
 
 @property (nonatomic, copy) MPKeyItemGroupPressedKeyChangedBlock keyItemGroupPressedKeyChangedBlock;
@@ -25,14 +25,14 @@ typedef void(^MPSendKeyClickedBlock)(void);
 @property (nonatomic, weak, readonly) UIResponder<UITextInput> *textInput;
 @property (nonatomic, assign) CGFloat toolsViewHeight;  //default 45.f
 
-+ (instancetype)sharedKeyboard;
++ (instancetype)keyboard;
 
 - (void)backspace;
 
 @end
 
 
-@interface UIResponder (PPYEmoticonsKeyboard)
+@interface UIResponder (MPEmojiKeyboard)
 
 @property (nonatomic, strong, readonly) MPEmojiKeyboard *emojiKeyboard;
 
