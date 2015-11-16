@@ -14,5 +14,4 @@
 
 + (MPEmojiKeyboard *)sharedKeyboard;
 
-+ (NSArray *)initEmojiItems;
 @end

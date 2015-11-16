@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C9018D611BFA34BA00763D06 /* MPEmojiEmoticons.m in Sources */ = {isa = PBXBuildFile; fileRef = C9018D601BFA34BA00763D06 /* MPEmojiEmoticons.m */; };
+		C9018D631BFA441800763D06 /* EmotionTextKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9018D621BFA441800763D06 /* EmotionTextKeys.plist */; };
 		C93821511B510FDC0036E216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821501B510FDC0036E216 /* main.m */; };
 		C93821541B510FDC0036E216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821531B510FDC0036E216 /* AppDelegate.m */; };
 		C93821571B510FDC0036E216 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821561B510FDC0036E216 /* ViewController.m */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		C9018D5F1BFA34BA00763D06 /* MPEmojiEmoticons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPEmojiEmoticons.h; sourceTree = "<group>"; };
 		C9018D601BFA34BA00763D06 /* MPEmojiEmoticons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPEmojiEmoticons.m; sourceTree = "<group>"; };
+		C9018D621BFA441800763D06 /* EmotionTextKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EmotionTextKeys.plist; sourceTree = "<group>"; };
 		C938214B1B510FDC0036E216 /* MPEmojiKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPEmojiKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C938214F1B510FDC0036E216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C93821501B510FDC0036E216 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		C938214E1B510FDC0036E216 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9018D621BFA441800763D06 /* EmotionTextKeys.plist */,
 				C938214F1B510FDC0036E216 /* Info.plist */,
 				C93821501B510FDC0036E216 /* main.m */,
 			);
@@ -270,6 +273,7 @@
 				C938215A1B510FDC0036E216 /* Main.storyboard in Resources */,
 				C938215F1B510FDC0036E216 /* LaunchScreen.xib in Resources */,
 				C938215C1B510FDC0036E216 /* Images.xcassets in Resources */,
+				C9018D631BFA441800763D06 /* EmotionTextKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

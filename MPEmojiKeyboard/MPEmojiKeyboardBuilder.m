@@ -24,7 +24,20 @@
         test1Group.title = @"emoji";
         
         
-        sharedKeyboard.keysGroups = @[test1Group];
+        MPEmojiKeyboardKeysFlowLayout *textIconsLayout = [[MPEmojiKeyboardKeysFlowLayout alloc] init];
+        textIconsLayout.itemSize = CGSizeMake(80, 142/3.0);
+        textIconsLayout.itemSpacing = 0;
+        textIconsLayout.lineSpacing = 0;
+        textIconsLayout.contentInsets = UIEdgeInsetsMake(0,0,0,0);
+        
+        MPEmojiKeyboardKeyGroup *textKeysGroup = [[MPEmojiKeyboardKeyGroup alloc] init];
+        textKeysGroup.keyItems = [self initTextkeyItems];
+        textKeysGroup.keyItemsLayout = textIconsLayout;
+        textKeysGroup.keyItemCellClass = [MPEmojiKeyboardTextKeyCell class];
+        textKeysGroup.title = @"(^_^)";
+        
+        sharedKeyboard.keysGroups = @[test1Group, textKeysGroup];
+        sharedKeyboard.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
         
     });
     return sharedKeyboard;
@@ -41,4 +54,20 @@
     }
     return emojiKeysItems;
 }
+
++ (NSArray *)initTextkeyItems
+{
+    NSMutableArray *textKeysItems = [[NSMutableArray alloc] init];
+    NSArray *textKeys = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"EmotionTextKeys" ofType:@"plist"]];
+    for(NSString *text in textKeys)
+    {
+        MPEmojiKeyboardKeyItem *item = [[MPEmojiKeyboardKeyItem alloc] init];
+        item.textToInput = text;
+        item.title = text;
+        [textKeysItems addObject:item];
+    }
+    
+    return textKeysItems;
+}
+
 @end
