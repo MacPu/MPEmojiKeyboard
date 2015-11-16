@@ -2,7 +2,7 @@
 //  MPEmojiKeyboardToolsView.h
 //  MPEmojiKeyboard
 //
-//  Created by 蒲德贵 on 15/11/16.
+//  Created by MacPu on 15/11/16.
 //  Copyright © 2015年 MacPu. All rights reserved.
 //
 

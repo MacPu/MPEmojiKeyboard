@@ -2,7 +2,7 @@
 //  MPEmojiKeyboardPressedPopupView.h
 //  MPEmojiKeyboard
 //
-//  Created by 蒲德贵 on 15/11/15.
+//  Created by MacPu on 15/11/15.
 //  Copyright © 2015年 MacPu. All rights reserved.
 //
 
