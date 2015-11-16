@@ -17,14 +17,14 @@
     static MPEmojiKeyboard *sharedKeyboard;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        MPEmojiKeyboard *keyboard = [MPEmojiKeyboard keyboard];
+        sharedKeyboard = [MPEmojiKeyboard keyboard];
         
         MPEmojiKeyboardKeyGroup *test1Group = [[MPEmojiKeyboardKeyGroup alloc] init];
         test1Group.keyItems = [MPEmojiKeyboardBuilder initEmojiItems];
         test1Group.title = @"emoji";
         
         
-        keyboard.keysGroups = @[test1Group];
+        sharedKeyboard.keysGroups = @[test1Group];
         
     });
     return sharedKeyboard;
