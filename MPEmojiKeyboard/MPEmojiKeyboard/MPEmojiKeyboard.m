@@ -7,11 +7,6 @@
 //
 
 #import "MPEmojiKeyboard.h"
-#import "MPEmojiKeyboardToolsView.h"
-#import "MPEmojiKeyboardKeyGroup.h"
-#import "MPEmojiKeyboardKeyCell.h"
-#import "MPEmojiKeyboardGroupView.h"
-#import "MPEmojiKeyboardKeysFlowLayout.h"
 
 @interface UIResponder (WriteableInputView)
 @property (readwrite, retain) UIView *inputView;

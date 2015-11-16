@@ -8,7 +8,7 @@
 
 #import "MPEmojiKeyboardKeyGroup.h"
 #import "MPEmojiKeyboardKeysFlowLayout.h"
-#import "MPEmojiKeyboardTextKeyCell.h"
+#import "MPEmojiKeyboardKeyCell.h"
 
 @implementation MPEmojiKeyboardKeyGroup
 @synthesize keyItemCellClass = _keyItemCellClass;
@@ -29,14 +29,14 @@
 - (Class)keyItemCellClass
 {
     if(!_keyItemCellClass){
-        _keyItemCellClass = [MPEmojiKeyboardTextKeyCell class];
+        _keyItemCellClass = [MPEmojiKeyboardKeyCell class];
     }
     return _keyItemCellClass;
 }
 
 - (void)setKeyItemCellClass:(Class)keyItemCellClass
 {
-    if ([keyItemCellClass isSubclassOfClass:[MPEmojiKeyboardTextKeyCell class]]) {
+    if ([keyItemCellClass isSubclassOfClass:[MPEmojiKeyboardKeyCell class]]) {
         _keyItemCellClass = keyItemCellClass;
     }else{
         NSAssert(NO, @"PPYExpressionKeyboardKeyItemGroup: Setting keyItemCellClass - keyItemCellClass must be a subclass of PPYExpressionKeyboardKeyCell.class");

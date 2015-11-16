@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MPEmojiKeyboardKeyGroup.h"
 #import "MPEmojiKeyboardKeyItem.h"
+#import "MPEmojiKeyboardKeysFlowLayout.h"
+#import "MPEmojiKeyboardKeyCell.h"
+#import "MPEmojiKeyboardToolsView.h"
+#import "MPEmojiKeyboardPressedPopupView.h"
+#import "MPEmojiKeyboardGroupView.h"
+#import "MPEmojiKeyboardTextKeyCell.h"
 
 @class MPEmojiKeyboardKeyCell;
 
