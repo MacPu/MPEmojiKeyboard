@@ -21,8 +21,13 @@
 }
 
 - (IBAction)buttonDidClicked:(id)sender {
-    MPEmojiKeyboard *keyboard = [MPEmojiKeyboardBuilder sharedKeyboard];
-    [_textFile switchToEmojiKeyboard:keyboard];
+    if(self.textFile.emojiKeyboard){
+        [self.textFile switchToDefaultKeyboard];
+    }
+    else{
+        MPEmojiKeyboard *keyboard = [MPEmojiKeyboardBuilder sharedKeyboard];
+        [_textFile switchToEmojiKeyboard:keyboard];
+    }
 }
 
 @end

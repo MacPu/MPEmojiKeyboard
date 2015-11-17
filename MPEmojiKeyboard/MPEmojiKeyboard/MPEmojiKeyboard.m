@@ -13,7 +13,6 @@
 @end
 
 #define kMPDefaultChangeToDefaultKeyboardNotification @"PPYExpresstionKeyboardDidSwitchToDefaultKeyboardNotification"
-#define kMPDefaultKeyboardDefaultSize  CGSizeMake(320,216)
 #define kMPDefaultKeyboardToolsViewDefaultHeight 45.0f
 #define kMPDefaultMaxDeleteButtonSize CGSizeMake(30,30)
 
@@ -51,7 +50,7 @@
 - (void)commonInit
 {
     if (CGRectIsEmpty(self.bounds)) {
-        self.bounds = (CGRect){CGPointZero,kMPDefaultKeyboardDefaultSize};
+        self.bounds = (CGRect){CGPointZero,CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), 216)};
     }
     
     self.backgroundColor = [UIColor blackColor];

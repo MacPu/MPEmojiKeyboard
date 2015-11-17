@@ -98,7 +98,7 @@
 {
     for (int i = 0; i < self.keyItemGroups.count; i++) {
         UIButton *button = (UIButton *)[self viewWithTag:i+100];
-        [button setBackgroundImage:[UIImage imageNamed:@"ppy_keyboard_tools_bg.png"] forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:@"ppy_keyboard_tools_bg"] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }
     [sender setBackgroundImage:[UIImage imageNamed:@"ppy_keyboard_gray_bg"] forState:UIControlStateNormal];
