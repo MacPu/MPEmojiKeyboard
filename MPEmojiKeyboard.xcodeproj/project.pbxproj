@@ -15,6 +15,7 @@
 		C9018D6E1BFB89B700763D06 /* ppy_keyboard_grid_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D691BFB89B700763D06 /* ppy_keyboard_grid_bg@2x.png */; };
 		C9018D6F1BFB89B700763D06 /* ppy_keyboard_popup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D6A1BFB89B700763D06 /* ppy_keyboard_popup@2x.png */; };
 		C9018D711BFB89ED00763D06 /* ppy_keyboard_tools_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D701BFB89ED00763D06 /* ppy_keyboard_tools_bg.png */; };
+		C9018D741BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.m in Sources */ = {isa = PBXBuildFile; fileRef = C9018D731BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.m */; };
 		C93821511B510FDC0036E216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821501B510FDC0036E216 /* main.m */; };
 		C93821541B510FDC0036E216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821531B510FDC0036E216 /* AppDelegate.m */; };
 		C93821571B510FDC0036E216 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93821561B510FDC0036E216 /* ViewController.m */; };
@@ -55,6 +56,8 @@
 		C9018D691BFB89B700763D06 /* ppy_keyboard_grid_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ppy_keyboard_grid_bg@2x.png"; sourceTree = "<group>"; };
 		C9018D6A1BFB89B700763D06 /* ppy_keyboard_popup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ppy_keyboard_popup@2x.png"; sourceTree = "<group>"; };
 		C9018D701BFB89ED00763D06 /* ppy_keyboard_tools_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ppy_keyboard_tools_bg.png; sourceTree = "<group>"; };
+		C9018D721BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardAppearence.h; path = MPEmojiKeyboard/MPEmojiKeyboardAppearence.h; sourceTree = "<group>"; };
+		C9018D731BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardAppearence.m; path = MPEmojiKeyboard/MPEmojiKeyboardAppearence.m; sourceTree = "<group>"; };
 		C938214B1B510FDC0036E216 /* MPEmojiKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPEmojiKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C938214F1B510FDC0036E216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C93821501B510FDC0036E216 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 				C99A341B1BF8E12600EABAF6 /* MPEmojiKeyboardPressedPopupView.m */,
 				C99A34201BF8E75000EABAF6 /* MPEmojiKeyboardToolsView.h */,
 				C99A34211BF8E75000EABAF6 /* MPEmojiKeyboardToolsView.m */,
+				C9018D721BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.h */,
+				C9018D731BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.m */,
 			);
 			name = MPEmojiKeyboard;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				C93821801B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m in Sources */,
 				C93821511B510FDC0036E216 /* main.m in Sources */,
 				C97059791BF249AF00124E6A /* MPEmojiKeyboardGroupView.m in Sources */,
+				C9018D741BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.m in Sources */,
 				C9C1761A1BF4E81E00A2F5BF /* MPEmojiKeyboardTextKeyCell.m in Sources */,
 				C99A341F1BF8E3D300EABAF6 /* MPEmojiKeyboard.m in Sources */,
 				C99A34221BF8E75000EABAF6 /* MPEmojiKeyboardToolsView.m in Sources */,

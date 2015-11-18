@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MPEmojiKeyboardKeyGroup.h"
+#import "MPEmojiKeyboardAppearence.h"
 
 @class MPEmojiKeyboardToolsView;
 
@@ -22,6 +23,8 @@
 
 @property (nonatomic, weak) id<MPEmojiKeyboardToolsViewDelegate> delegate;
 @property (nonatomic, strong) NSArray *keyItemGroups;
+
+@property (nonatomic, weak) MPEmojiKeyboardAppearence *appearence;
 
 - (void)changeKeyItemGroup:(NSInteger)groupIndex;
 

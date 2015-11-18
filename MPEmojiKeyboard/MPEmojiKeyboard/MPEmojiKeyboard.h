@@ -15,6 +15,7 @@
 #import "MPEmojiKeyboardPressedPopupView.h"
 #import "MPEmojiKeyboardGroupView.h"
 #import "MPEmojiKeyboardTextKeyCell.h"
+#import "MPEmojiKeyboardAppearence.h"
 
 @class MPEmojiKeyboardKeyCell;
 
@@ -30,7 +31,8 @@ typedef void(^MPSendKeyClickedBlock)(void);
 @property (nonatomic, copy) MPSendKeyClickedBlock sendKeyClickedBlock;
 
 @property (nonatomic, weak, readonly) UIResponder<UITextInput> *textInput;
-@property (nonatomic, assign) CGFloat toolsViewHeight;  //default 45.f
+
+@property (nonatomic, strong) MPEmojiKeyboardAppearence *appearence;
 
 + (instancetype)keyboard;
 

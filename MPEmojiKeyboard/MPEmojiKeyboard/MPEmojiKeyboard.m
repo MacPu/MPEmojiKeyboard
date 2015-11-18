@@ -53,25 +53,27 @@
         self.bounds = (CGRect){CGPointZero,CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), 216)};
     }
     
+    _appearence = [MPEmojiKeyboardAppearence defaultAppearence];
+    
     self.backgroundColor = [UIColor blackColor];
     
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.bounds];
     backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self addSubview:backgroundImageView];
     self.backgroundImageView = backgroundImageView;
-    
-    self.toolsViewHeight = kMPDefaultKeyboardToolsViewDefaultHeight;
-    
+
     MPEmojiKeyboardToolsView *toolsView = [[MPEmojiKeyboardToolsView alloc] initWithFrame:self.toolsViewFrame];
     toolsView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     toolsView.delegate = self;
+    toolsView.appearence = _appearence;
     [self addSubview:toolsView];
     self.toolsView = toolsView;
+    
 }
 
 - (CGRect)toolsViewFrame
 {
-    return CGRectMake(0, CGRectGetHeight(self.bounds) - self.toolsViewHeight, CGRectGetWidth(self.bounds), self.toolsViewHeight);
+    return CGRectMake(0, CGRectGetHeight(self.bounds) - _appearence.toolsViewHeight, CGRectGetWidth(self.bounds), _appearence.toolsViewHeight);
 }
 
 - (void)switchToDefaultKeyboard
@@ -176,12 +178,6 @@
     } else {
         [self replaceTextInRange:self.textInput.selectedTextRange withText:@""];
     }
-}
-
-- (void)setToolsViewHeight:(CGFloat)toolsViewHeight
-{
-    _toolsViewHeight = toolsViewHeight;
-    [self setNeedsLayout];
 }
 
 - (CGRect)keyItemGroupViewFrame

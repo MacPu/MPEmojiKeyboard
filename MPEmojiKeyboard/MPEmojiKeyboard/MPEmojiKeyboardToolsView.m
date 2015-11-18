@@ -37,12 +37,6 @@
 - (void)commonInit
 {
     UIButton *sendButton = [[UIButton alloc] init];
-    sendButton.backgroundColor = [UIColor blueColor];
-    [sendButton setBackgroundImage:[UIImage imageNamed:@"ppy_keyboard_blue_bg.png"] forState:UIControlStateNormal];
-    [sendButton setBackgroundImage:[UIImage imageNamed:@"ppy_keyboard_gray_bg.png"] forState:UIControlStateHighlighted];
-    [sendButton setTitle:@"Send" forState:UIControlStateNormal];
-    [sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [sendButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     [sendButton addTarget:self action:@selector(sendButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:sendButton];
     _sendButton = sendButton;
@@ -53,11 +47,17 @@
 {
     [super layoutSubviews];
     self.sendButton.frame = (CGRect){{self.frame.size.width/3*2,0},{self.frame.size.width/3,self.frame.size.height}};
-    
-    CALayer *topLayer = [[CALayer alloc] init];
-    topLayer.frame = CGRectMake(0, 0, self.frame.size.width, 0.5);
-    topLayer.backgroundColor = [UIColor grayColor].CGColor;
-    [self.layer addSublayer:topLayer];
+}
+
+- (void)setAppearence:(MPEmojiKeyboardAppearence *)appearence
+{
+    _appearence = appearence;
+    _sendButton.backgroundColor = _appearence.sendKeyBackgroundColor;
+    [_sendButton setBackgroundImage:_appearence.groupButtonBackgroundImage forState:UIControlStateNormal];
+    [_sendButton setBackgroundImage:_appearence.groupButtonSelectBackgroundImage forState:UIControlStateHighlighted];
+    [_sendButton setTitle:_appearence.sendKeyString forState:UIControlStateNormal];
+    [_sendButton setTitleColor:_appearence.sendKeyTextColor forState:UIControlStateNormal];
+    [_sendButton setTitleColor:_appearence.sendKeyHightlightTextColor forState:UIControlStateHighlighted];
 }
 
 - (void)setKeyItemGroups:(NSArray *)keyItemGroups

@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vu0-Wn-lLk">
-                                <rect key="frame" x="357" y="129" width="51" height="30"/>
+                                <rect key="frame" x="107" y="208" width="51" height="30"/>
                                 <animations/>
                                 <state key="normal" title="chnage"/>
                                 <connections>

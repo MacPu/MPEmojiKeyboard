@@ -39,6 +39,13 @@
         sharedKeyboard.keysGroups = @[test1Group, textKeysGroup];
         sharedKeyboard.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
         
+        if (textIconsLayout.collectionView) {
+            UIView *textGridBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [textIconsLayout collectionViewContentSize].width, [textIconsLayout collectionViewContentSize].height)];
+            textGridBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            textGridBackgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ppy_keyboard_grid_bg"]];
+            [textIconsLayout.collectionView addSubview:textGridBackgroundView];
+        }
+        
     });
     return sharedKeyboard;
 }

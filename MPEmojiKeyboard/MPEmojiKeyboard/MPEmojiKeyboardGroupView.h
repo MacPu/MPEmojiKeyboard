@@ -10,11 +10,14 @@
 #import "MPEmojiKeyboardKeyItem.h"
 #import "MPEmojiKeyboardKeyGroup.h"
 #import "MPEmojiKeyboardKeyCell.h"
+#import "MPEmojiKeyboardAppearence.h"
 
 @interface MPEmojiKeyboardGroupView : UIView
 
 @property (nonatomic, strong) MPEmojiKeyboardKeyGroup *keyGroup;
 @property (nonatomic, weak, readonly) UIImageView *backgroundImageView;
+
+@property (nonatomic, weak) MPEmojiKeyboardAppearence *appearence;
 
 @property (nonatomic, copy) void (^keyItemTappedBlock)(MPEmojiKeyboardKeyItem *keyItem);
 @property (nonatomic, copy) void (^pressedKeyItemCellChangedBlock)(MPEmojiKeyboardKeyCell *fromCell, MPEmojiKeyboardKeyCell *toCell);
