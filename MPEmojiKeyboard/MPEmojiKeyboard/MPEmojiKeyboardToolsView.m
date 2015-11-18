@@ -37,17 +37,21 @@
 
 - (void)commonInit
 {
-    UIButton *sendButton = [[UIButton alloc] init];
-    [sendButton addTarget:self action:@selector(sendButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:sendButton];
-    _sendButton = sendButton;
-    
     _contentView = [[UIScrollView alloc] init];
-//    [_contentView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"mp_keyboard_tools_bg"]]];
     [_contentView setBackgroundColor:[UIColor whiteColor]];
     _contentView.alwaysBounceHorizontal = YES;
     [_contentView setContentSize:CGSizeMake(_contentView.subviews.count * 100, _contentView.frame.size.height)];
     [self addSubview:_contentView];
+    
+    UIButton *sendButton = [[UIButton alloc] init];
+    [sendButton addTarget:self action:@selector(sendButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    sendButton.layer.shadowColor = [UIColor grayColor].CGColor;
+    sendButton.layer.shadowOffset = CGSizeMake(-3, 3);
+    sendButton.layer.shadowOpacity = 1.0;
+    sendButton.layer.shadowRadius = 4;
+    [self addSubview:sendButton];
+    _sendButton = sendButton;
+    
 }
 
 - (void)layoutSubviews
@@ -61,8 +65,6 @@
 {
     _appearence = appearence;
     _sendButton.backgroundColor = _appearence.sendKeyBackgroundColor;
-    [_sendButton setBackgroundImage:_appearence.groupButtonBackgroundImage forState:UIControlStateNormal];
-    [_sendButton setBackgroundImage:_appearence.groupButtonSelectBackgroundImage forState:UIControlStateHighlighted];
     [_sendButton setTitle:_appearence.sendKeyString forState:UIControlStateNormal];
     [_sendButton setTitleColor:_appearence.sendKeyTextColor forState:UIControlStateNormal];
     [_sendButton setTitleColor:_appearence.sendKeyHightlightTextColor forState:UIControlStateHighlighted];
@@ -79,6 +81,13 @@
         button.tag = idx+100;
         button.titleLabel.font = [UIFont systemFontOfSize:15];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+        
+        if(idx){
+            CALayer *leftLayer = [[CALayer alloc] init];
+            leftLayer.frame = CGRectMake(0, 5, 0.5, CGRectGetHeight(button.frame) - 10);
+            leftLayer.backgroundColor = [UIColor grayColor].CGColor;
+            [button.layer addSublayer:leftLayer];
+        }
         
         [button addTarget:self action:@selector(keyItemGroupChanged:) forControlEvents:UIControlEventTouchUpInside];
         if (obj.iconImage) {

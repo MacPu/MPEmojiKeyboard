@@ -37,7 +37,7 @@
 
 - (void)commonInit
 {
-    UIImage *popupBackground = [UIImage imageNamed:@"ppy_keyboard_popup"];
+    UIImage *popupBackground = [UIImage imageNamed:@"mp_keyboard_popup"];
     UIImageView *popupBackgroundView = [[UIImageView alloc] initWithImage:popupBackground];
     [self addSubview:popupBackgroundView];
     

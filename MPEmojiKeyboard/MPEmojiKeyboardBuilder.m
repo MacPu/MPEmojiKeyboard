@@ -39,6 +39,10 @@
         sharedKeyboard.keysGroups = @[test1Group, textKeysGroup];
         sharedKeyboard.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
         
+        [sharedKeyboard setKeyItemGroupPressedKeyChangedBlock:^(MPEmojiKeyboardKeyGroup *keyItemsGroup, MPEmojiKeyboardKeyCell *fromCell, MPEmojiKeyboardKeyCell *toCell){
+            [self sharedEmotionsKeyboardKeyItemGroup:keyItemsGroup pressedKeyCellChangedFromCell:fromCell toCell:toCell];
+        }];
+        
         if (textIconsLayout.collectionView) {
             UIView *textGridBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [textIconsLayout collectionViewContentSize].width, [textIconsLayout collectionViewContentSize].height)];
             textGridBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -75,6 +79,31 @@
     }
     
     return textKeysItems;
+}
+
++ (void)sharedEmotionsKeyboardKeyItemGroup:(MPEmojiKeyboardKeyGroup *)keyItemGroup
+             pressedKeyCellChangedFromCell:(MPEmojiKeyboardKeyCell *)fromCell
+                                    toCell:(MPEmojiKeyboardKeyCell *)toCell
+{
+    static MPEmojiKeyboardPressedPopupView *pressedKeyCellPopupView;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        pressedKeyCellPopupView = [[MPEmojiKeyboardPressedPopupView alloc] initWithFrame:CGRectMake(0, 0, 83, 110)];
+        pressedKeyCellPopupView.hidden = YES;
+        [[self sharedKeyboard] addSubview:pressedKeyCellPopupView];
+    });
+    
+    if ([[self sharedKeyboard].keysGroups indexOfObject:keyItemGroup] < 1) {
+        [[self sharedKeyboard] bringSubviewToFront:pressedKeyCellPopupView];
+        if (toCell) {
+            pressedKeyCellPopupView.keyItem = toCell.keyItem;
+            pressedKeyCellPopupView.hidden = NO;
+            CGRect frame = [[self sharedKeyboard] convertRect:toCell.bounds fromView:toCell];
+            pressedKeyCellPopupView.center = CGPointMake(CGRectGetMidX(frame), CGRectGetMaxY(frame)-CGRectGetHeight(pressedKeyCellPopupView.frame)/2);
+        }else{
+            pressedKeyCellPopupView.hidden = YES;
+        }
+    }
 }
 
 @end
