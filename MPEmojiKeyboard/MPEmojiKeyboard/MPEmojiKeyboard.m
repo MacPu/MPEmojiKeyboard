@@ -194,6 +194,12 @@
     }];
 }
 
+- (void)setAppearence:(MPEmojiKeyboardAppearence *)appearence
+{
+    _appearence = appearence;
+    _toolsView.appearence = appearence;
+}
+
 #pragma mark - KeyItems
 
 - (void)setKeysGroups:(NSArray *)keysGroups
