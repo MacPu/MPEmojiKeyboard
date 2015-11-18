@@ -20,7 +20,9 @@
     appearence.sendKeyBackgroundColor = [UIColor blueColor];
     appearence.sendKeyString = @"Send";
     appearence.groupButtonBackgroundImage = nil;
+    appearence.groupButtonTextColor = [UIColor grayColor];
     appearence.groupButtonSelectBackgroundImage = nil;
+    appearence.groupButtonSelectTextColor = [UIColor whiteColor];
     return appearence;
 }
 

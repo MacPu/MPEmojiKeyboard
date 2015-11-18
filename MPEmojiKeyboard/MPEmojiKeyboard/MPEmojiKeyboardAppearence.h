@@ -17,7 +17,9 @@
 @property (nonatomic, strong) UIColor *sendKeyHightlightTextColor;
 @property (nonatomic, copy) NSString *sendKeyString;
 @property (nonatomic, strong) UIImage *groupButtonBackgroundImage;
+@property (nonatomic, strong) UIColor *groupButtonTextColor;
 @property (nonatomic, strong) UIImage *groupButtonSelectBackgroundImage;
+@property (nonatomic, strong) UIColor *groupButtonSelectTextColor;
 
 @property (nonatomic, assign) CGFloat toolsViewHeight;  //default 45.f
 
