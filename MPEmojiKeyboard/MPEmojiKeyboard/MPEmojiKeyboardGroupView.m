@@ -212,7 +212,7 @@
     if(!cell)
         cell = [[MPEmojiKeyboardKeyCell alloc] init];
     NSInteger numberOfItemsInPerPage = [self numberOfItemsInPerPage] - 1;
-    
+
     //每一页的最后一个的KeyItem设置为空，为了给删除按钮提供位置。
     if(indexPath.item != 0 && !((indexPath.item+1) %[self numberOfItemsInPerPage]) ){
         cell.keyItem = nil;
@@ -220,6 +220,10 @@
     else{
         cell.keyItem = [self.keyGroup.keyItems objectAtIndex:indexPath.item-(indexPath.item /numberOfItemsInPerPage)];
     }
+    
+    if(self.keyGroup.keyFont)
+        cell.keyButton.titleLabel.font = self.keyGroup.keyFont;
+    
     return cell;
 }
 
