@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9018D611BFA34BA00763D06 /* MPEmojiEmoticons.m in Sources */ = {isa = PBXBuildFile; fileRef = C9018D601BFA34BA00763D06 /* MPEmojiEmoticons.m */; };
 		C9018D631BFA441800763D06 /* EmotionTextKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9018D621BFA441800763D06 /* EmotionTextKeys.plist */; };
 		C9018D6B1BFB89B700763D06 /* backspace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D661BFB89B700763D06 /* backspace@2x.png */; };
 		C9018D6C1BFB89B700763D06 /* ppy_keyboard_blue_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D671BFB89B700763D06 /* ppy_keyboard_blue_bg@2x.png */; };
@@ -32,7 +31,10 @@
 		C99A341F1BF8E3D300EABAF6 /* MPEmojiKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A341E1BF8E3D300EABAF6 /* MPEmojiKeyboard.m */; };
 		C99A34221BF8E75000EABAF6 /* MPEmojiKeyboardToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A34211BF8E75000EABAF6 /* MPEmojiKeyboardToolsView.m */; };
 		C99A34251BFA32A500EABAF6 /* MPEmojiKeyboardBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A34241BFA32A500EABAF6 /* MPEmojiKeyboardBuilder.m */; };
-		C99A34281BFA33F900EABAF6 /* MPEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A34271BFA33F900EABAF6 /* MPEmoji.m */; };
+		C9A53D8B1BFC1CA000B82832 /* MPEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A53D881BFC1CA000B82832 /* MPEmoji.m */; };
+		C9A53D8C1BFC1CA000B82832 /* MPEmojiEmoticons.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A53D8A1BFC1CA000B82832 /* MPEmojiEmoticons.m */; };
+		C9A53D901BFC1CAE00B82832 /* mp_keyboard_backspace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A53D8E1BFC1CAE00B82832 /* mp_keyboard_backspace@2x.png */; };
+		C9A53D911BFC1CAE00B82832 /* mp_keyboard_popup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A53D8F1BFC1CAE00B82832 /* mp_keyboard_popup@2x.png */; };
 		C9C1761A1BF4E81E00A2F5BF /* MPEmojiKeyboardTextKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C176191BF4E81E00A2F5BF /* MPEmojiKeyboardTextKeyCell.m */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C9018D5F1BFA34BA00763D06 /* MPEmojiEmoticons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPEmojiEmoticons.h; sourceTree = "<group>"; };
-		C9018D601BFA34BA00763D06 /* MPEmojiEmoticons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPEmojiEmoticons.m; sourceTree = "<group>"; };
 		C9018D621BFA441800763D06 /* EmotionTextKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EmotionTextKeys.plist; sourceTree = "<group>"; };
 		C9018D661BFB89B700763D06 /* backspace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backspace@2x.png"; sourceTree = "<group>"; };
 		C9018D671BFB89B700763D06 /* ppy_keyboard_blue_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ppy_keyboard_blue_bg@2x.png"; sourceTree = "<group>"; };
@@ -89,8 +89,12 @@
 		C99A34211BF8E75000EABAF6 /* MPEmojiKeyboardToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardToolsView.m; path = MPEmojiKeyboard/MPEmojiKeyboardToolsView.m; sourceTree = "<group>"; };
 		C99A34231BFA32A500EABAF6 /* MPEmojiKeyboardBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPEmojiKeyboardBuilder.h; sourceTree = "<group>"; };
 		C99A34241BFA32A500EABAF6 /* MPEmojiKeyboardBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPEmojiKeyboardBuilder.m; sourceTree = "<group>"; };
-		C99A34261BFA33F900EABAF6 /* MPEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPEmoji.h; sourceTree = "<group>"; };
-		C99A34271BFA33F900EABAF6 /* MPEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPEmoji.m; sourceTree = "<group>"; };
+		C9A53D871BFC1CA000B82832 /* MPEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPEmoji.h; sourceTree = "<group>"; };
+		C9A53D881BFC1CA000B82832 /* MPEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPEmoji.m; sourceTree = "<group>"; };
+		C9A53D891BFC1CA000B82832 /* MPEmojiEmoticons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPEmojiEmoticons.h; sourceTree = "<group>"; };
+		C9A53D8A1BFC1CA000B82832 /* MPEmojiEmoticons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPEmojiEmoticons.m; sourceTree = "<group>"; };
+		C9A53D8E1BFC1CAE00B82832 /* mp_keyboard_backspace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mp_keyboard_backspace@2x.png"; sourceTree = "<group>"; };
+		C9A53D8F1BFC1CAE00B82832 /* mp_keyboard_popup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mp_keyboard_popup@2x.png"; sourceTree = "<group>"; };
 		C9C176181BF4E81E00A2F5BF /* MPEmojiKeyboardTextKeyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardTextKeyCell.h; path = MPEmojiKeyboard/MPEmojiKeyboardTextKeyCell.h; sourceTree = "<group>"; };
 		C9C176191BF4E81E00A2F5BF /* MPEmojiKeyboardTextKeyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardTextKeyCell.m; path = MPEmojiKeyboard/MPEmojiKeyboardTextKeyCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,10 +163,6 @@
 				C938214E1B510FDC0036E216 /* Supporting Files */,
 				C99A34231BFA32A500EABAF6 /* MPEmojiKeyboardBuilder.h */,
 				C99A34241BFA32A500EABAF6 /* MPEmojiKeyboardBuilder.m */,
-				C99A34261BFA33F900EABAF6 /* MPEmoji.h */,
-				C99A34271BFA33F900EABAF6 /* MPEmoji.m */,
-				C9018D5F1BFA34BA00763D06 /* MPEmojiEmoticons.h */,
-				C9018D601BFA34BA00763D06 /* MPEmojiEmoticons.m */,
 			);
 			path = MPEmojiKeyboard;
 			sourceTree = "<group>";
@@ -197,6 +197,8 @@
 		C93821741B51178D0036E216 /* MPEmojiKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				C9A53D8D1BFC1CAE00B82832 /* Resources */,
+				C9A53D861BFC1CA000B82832 /* MPEmojiKeyboardUtils */,
 				C99A341D1BF8E3D300EABAF6 /* MPEmojiKeyboard.h */,
 				C99A341E1BF8E3D300EABAF6 /* MPEmojiKeyboard.m */,
 				C93821781B51196C0036E216 /* MPEmojiKeyboardKeyItem.h */,
@@ -219,6 +221,28 @@
 				C9018D731BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.m */,
 			);
 			name = MPEmojiKeyboard;
+			sourceTree = "<group>";
+		};
+		C9A53D861BFC1CA000B82832 /* MPEmojiKeyboardUtils */ = {
+			isa = PBXGroup;
+			children = (
+				C9A53D871BFC1CA000B82832 /* MPEmoji.h */,
+				C9A53D881BFC1CA000B82832 /* MPEmoji.m */,
+				C9A53D891BFC1CA000B82832 /* MPEmojiEmoticons.h */,
+				C9A53D8A1BFC1CA000B82832 /* MPEmojiEmoticons.m */,
+			);
+			name = MPEmojiKeyboardUtils;
+			path = MPEmojiKeyboard/MPEmojiKeyboardUtils;
+			sourceTree = "<group>";
+		};
+		C9A53D8D1BFC1CAE00B82832 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9A53D8E1BFC1CAE00B82832 /* mp_keyboard_backspace@2x.png */,
+				C9A53D8F1BFC1CAE00B82832 /* mp_keyboard_popup@2x.png */,
+			);
+			name = Resources;
+			path = MPEmojiKeyboard/Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,12 +326,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9018D6F1BFB89B700763D06 /* ppy_keyboard_popup@2x.png in Resources */,
+				C9A53D911BFC1CAE00B82832 /* mp_keyboard_popup@2x.png in Resources */,
 				C9018D6C1BFB89B700763D06 /* ppy_keyboard_blue_bg@2x.png in Resources */,
 				C9018D6D1BFB89B700763D06 /* ppy_keyboard_gray_bg@2x.png in Resources */,
 				C9018D711BFB89ED00763D06 /* ppy_keyboard_tools_bg.png in Resources */,
 				C938215A1B510FDC0036E216 /* Main.storyboard in Resources */,
 				C938215F1B510FDC0036E216 /* LaunchScreen.xib in Resources */,
 				C938215C1B510FDC0036E216 /* Images.xcassets in Resources */,
+				C9A53D901BFC1CAE00B82832 /* mp_keyboard_backspace@2x.png in Resources */,
 				C9018D631BFA441800763D06 /* EmotionTextKeys.plist in Resources */,
 				C9018D6E1BFB89B700763D06 /* ppy_keyboard_grid_bg@2x.png in Resources */,
 				C9018D6B1BFB89B700763D06 /* backspace@2x.png in Resources */,
@@ -331,12 +357,11 @@
 				C93821571B510FDC0036E216 /* ViewController.m in Sources */,
 				C938217D1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m in Sources */,
 				C999C0601B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.m in Sources */,
-				C99A34281BFA33F900EABAF6 /* MPEmoji.m in Sources */,
 				C938217A1B51196C0036E216 /* MPEmojiKeyboardKeyItem.m in Sources */,
+				C9A53D8B1BFC1CA000B82832 /* MPEmoji.m in Sources */,
 				C93821541B510FDC0036E216 /* AppDelegate.m in Sources */,
 				C99A341C1BF8E12600EABAF6 /* MPEmojiKeyboardPressedPopupView.m in Sources */,
 				C99A34251BFA32A500EABAF6 /* MPEmojiKeyboardBuilder.m in Sources */,
-				C9018D611BFA34BA00763D06 /* MPEmojiEmoticons.m in Sources */,
 				C93821801B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m in Sources */,
 				C93821511B510FDC0036E216 /* main.m in Sources */,
 				C97059791BF249AF00124E6A /* MPEmojiKeyboardGroupView.m in Sources */,
@@ -344,6 +369,7 @@
 				C9C1761A1BF4E81E00A2F5BF /* MPEmojiKeyboardTextKeyCell.m in Sources */,
 				C99A341F1BF8E3D300EABAF6 /* MPEmojiKeyboard.m in Sources */,
 				C99A34221BF8E75000EABAF6 /* MPEmojiKeyboardToolsView.m in Sources */,
+				C9A53D8C1BFC1CA000B82832 /* MPEmojiEmoticons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

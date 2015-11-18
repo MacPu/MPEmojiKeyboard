@@ -245,7 +245,7 @@
             (flowLayout.itemSize.height +  flowLayout.lineSpacing)*(numberOfLine-1) +flowLayout.lineSpacing + (flowLayout.itemSize.height -kMPDefaultMaxDeleteButtonSize.height)/2},
             kMPDefaultMaxDeleteButtonSize};
         [deleButton addTarget:self action:@selector(backspace) forControlEvents:UIControlEventTouchUpInside];
-        [deleButton setImage:[UIImage imageNamed:@"backspace.png"] forState:UIControlStateNormal];
+        [deleButton setImage:_appearence.backspaceImage forState:UIControlStateNormal];
         deleButton.userInteractionEnabled = YES;
         deleButton.tag = i + 1000;
         [collectionView addSubview:deleButton];

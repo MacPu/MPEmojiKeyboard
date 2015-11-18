@@ -14,7 +14,7 @@
 {
     MPEmojiKeyboardAppearence *appearence = [[MPEmojiKeyboardAppearence alloc] init];
     appearence.toolsViewHeight = 45.;
-    appearence.backspaceImage = [UIImage imageNamed:@"backspace"];
+    appearence.backspaceImage = [UIImage imageNamed:@"mp_keyboard_backspace"];
     appearence.sendKeyTextColor = [UIColor whiteColor];
     appearence.sendKeyHightlightTextColor = [UIColor blackColor];
     appearence.sendKeyBackgroundColor = [UIColor blueColor];
