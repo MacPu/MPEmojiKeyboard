@@ -46,9 +46,9 @@
     UIButton *sendButton = [[UIButton alloc] init];
     [sendButton addTarget:self action:@selector(sendButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     sendButton.layer.shadowColor = [UIColor grayColor].CGColor;
-    sendButton.layer.shadowOffset = CGSizeMake(-3, 3);
+    sendButton.layer.shadowOffset = CGSizeMake(-2, 3);
     sendButton.layer.shadowOpacity = 1.0;
-    sendButton.layer.shadowRadius = 4;
+    sendButton.layer.shadowRadius = 3;
     [self addSubview:sendButton];
     _sendButton = sendButton;
     
