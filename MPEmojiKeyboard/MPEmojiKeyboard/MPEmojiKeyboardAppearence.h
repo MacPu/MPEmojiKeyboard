@@ -19,7 +19,7 @@
 @property (nonatomic, strong) UIImage *groupButtonBackgroundImage;
 @property (nonatomic, strong) UIColor *groupButtonTextColor;
 @property (nonatomic, strong) UIImage *groupButtonSelectBackgroundImage;
-@property (nonatomic, strong) UIColor *groupButtonSelectTextColor;
+@property (nonatomic, strong) UIColor *groupButtonSelectTextColor;  // default black
 
 @property (nonatomic, assign) CGFloat toolsViewHeight;  //default 45.f
 
