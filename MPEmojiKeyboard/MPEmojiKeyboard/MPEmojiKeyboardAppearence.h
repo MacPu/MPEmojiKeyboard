@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) UIImage *backspaceImage;
 @property (nonatomic, strong) UIColor *sendKeyBackgroundColor;
-@property (nonatomic, strong) UIColor *sendKeyTextColor;
+@property (nonatomic, strong) UIColor *sendKeyTextColor;  // defaukt is "Send"
 @property (nonatomic, strong) UIColor *sendKeyHightlightTextColor;
 @property (nonatomic, copy) NSString *sendKeyString;
 @property (nonatomic, strong) UIImage *groupButtonBackgroundImage;
