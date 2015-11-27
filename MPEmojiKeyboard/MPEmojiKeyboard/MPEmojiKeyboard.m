@@ -9,11 +9,11 @@
 #import "MPEmojiKeyboard.h"
 
 @interface UIResponder (WriteableInputView)
+
 @property (readwrite, retain) UIView *inputView;
+
 @end
 
-#define kMPDefaultChangeToDefaultKeyboardNotification @"PPYExpresstionKeyboardDidSwitchToDefaultKeyboardNotification"
-#define kMPDefaultKeyboardToolsViewDefaultHeight 45.0f
 #define kMPDefaultMaxDeleteButtonSize CGSizeMake(30,30)
 
 @interface MPEmojiKeyboard() < MPEmojiKeyboardToolsViewDelegate>
@@ -80,7 +80,6 @@
 {
     [self setInputViewToView:nil];
     self.textInput = nil;
-    [[NSNotificationCenter defaultCenter] postNotificationName:kMPDefaultChangeToDefaultKeyboardNotification object:self];
 }
 
 - (void)setInputViewToView:(UIView *)view
@@ -237,7 +236,6 @@
     self.keyItemGroupViews = [keyItemGroupViews copy];
 }
 
-//添加delete按钮
 - (void)addDeleteButtonForKeyGroup:(MPEmojiKeyboardKeyGroup *)keyGroup
 {
     MPEmojiKeyboardKeysFlowLayout *flowLayout = (MPEmojiKeyboardKeysFlowLayout *)keyGroup.keyItemsLayout;
