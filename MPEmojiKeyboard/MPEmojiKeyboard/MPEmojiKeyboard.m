@@ -263,12 +263,6 @@
     [UIDevice.currentDevice playInputClick];
 }
 
-- (BOOL) enableInputClicksWhenVisible
-{
-    return self.enableStandardSystemKeyboardClickSound;
-    
-}
-
 #pragma mark - MPEmojiKeyboardToolsViewDelegate
 
 - (void)toolsView:(MPEmojiKeyboardToolsView *)toolsView didSelectedKeyItemGroup:(MPEmojiKeyboardKeyGroup *)keyItemGroup
