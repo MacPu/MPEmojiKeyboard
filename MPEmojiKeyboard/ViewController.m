@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"MPEmojiKeyboard";
 }
 
 - (IBAction)buttonDidClicked:(id)sender {
