@@ -10,6 +10,57 @@
 #import "MPEmojiKeyboard.h"
 #import "MPEmoji.h"
 
+#define SCREENHEITH CGRectGetHeight([[UIScreen mainScreen] bounds])
+#define SCREENWIDTH CGRectGetWidth([[UIScreen mainScreen] bounds])
+#define IS_IPHONE_4 SCREENHEITH == 480
+#define IS_IPHONE_5 SCREENHEITH == 568
+#define IS_IPHONE_6 SCREENHEITH == 667
+#define IS_IPHONE_6PLUS SCREENHEITH == 736
+
+@interface UIColor (MPToolkit)
+
++ (UIColor *)colorWithARGB:(u_int32_t)argb;
+
+@end
+
+@implementation UIColor (MPToolkit)
+
++ (UIColor *)colorWithARGB:(u_int32_t)argb
+{
+    return [UIColor colorWithRed:((argb&0xff0000)>>16)/255.0 green:((argb&0xff00)>>8)/255.0 blue:(argb&0xff)/255.0 alpha:(argb>>24)/255.0];
+}
+@end
+
+@interface UIImage (Color)
+
++(UIImage *)imageFromContextWithColor:(UIColor *)color;
++(UIImage *)imageFromContextWithColor:(UIColor *)color size:(CGSize)size;
+
+@end
+
+@implementation UIImage (Color)
+
++(UIImage *)imageFromContextWithColor:(UIColor *)color size:(CGSize)size{
+    
+    CGRect rect=(CGRect){{0.0f,0.0f},size};
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0f);
+    CGContextRef context=UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image=UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
++(UIImage *)imageFromContextWithColor:(UIColor *)color{
+    
+    CGSize size=CGSizeMake(1.0f, 1.0f);
+    return [self imageFromContextWithColor:color size:size];
+}
+
+@end
+
 @implementation MPEmojiKeyboardBuilder
 
 + (MPEmojiKeyboard *)sharedKeyboard
@@ -17,7 +68,17 @@
     static MPEmojiKeyboard *sharedKeyboard;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        MPEmojiKeyboardAppearence *appearence = [MPEmojiKeyboardAppearence defaultAppearence];
+        appearence.sendKeyBackgroundColor = [UIColor colorWithARGB:0xFF107CF6];
+        appearence.sendKeyTextColor = [UIColor whiteColor];
+        appearence.sendKeyHightlightTextColor = [UIColor lightGrayColor];
+        appearence.groupButtonBackgroundImage = [UIImage imageFromContextWithColor:[UIColor whiteColor]];
+        appearence.groupButtonSelectTextColor = [UIColor blackColor];
+        appearence.groupButtonTextColor = [UIColor blackColor];
+        appearence.groupButtonSelectBackgroundImage = [UIImage imageFromContextWithColor:[UIColor colorWithARGB:0xFFF0F0F0]];
+        
         sharedKeyboard = [MPEmojiKeyboard keyboard];
+        sharedKeyboard.appearence = appearence;
         
         MPEmojiKeyboardKeyGroup *test1Group = [[MPEmojiKeyboardKeyGroup alloc] init];
         test1Group.keyItems = [MPEmojiKeyboardBuilder initEmojiItems];
@@ -25,7 +86,7 @@
         
         
         MPEmojiKeyboardKeysFlowLayout *textIconsLayout = [[MPEmojiKeyboardKeysFlowLayout alloc] init];
-        textIconsLayout.itemSize = CGSizeMake(80, 142/3.0);
+        textIconsLayout.itemSize = CGSizeMake(SCREENWIDTH / 4, 142/3.0);
         textIconsLayout.itemSpacing = 0;
         textIconsLayout.lineSpacing = 0;
         textIconsLayout.contentInsets = UIEdgeInsetsMake(0,0,0,0);
@@ -46,7 +107,15 @@
         if (textIconsLayout.collectionView) {
             UIView *textGridBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [textIconsLayout collectionViewContentSize].width, [textIconsLayout collectionViewContentSize].height)];
             textGridBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-            textGridBackgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ppy_keyboard_grid_bg"]];
+            if(IS_IPHONE_6){
+                textGridBackgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"keyboard_grid_bg_6s"]];
+            }
+            else if (IS_IPHONE_6PLUS){
+                textGridBackgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"keyboard_grid_bg_6p"]];
+            }
+            else{
+                textGridBackgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"keyboard_grid_bg"]];
+            }
             [textIconsLayout.collectionView addSubview:textGridBackgroundView];
         }
         

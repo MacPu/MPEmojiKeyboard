@@ -11,7 +11,6 @@
 		C9018D6B1BFB89B700763D06 /* backspace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D661BFB89B700763D06 /* backspace@2x.png */; };
 		C9018D6C1BFB89B700763D06 /* ppy_keyboard_blue_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D671BFB89B700763D06 /* ppy_keyboard_blue_bg@2x.png */; };
 		C9018D6D1BFB89B700763D06 /* ppy_keyboard_gray_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D681BFB89B700763D06 /* ppy_keyboard_gray_bg@2x.png */; };
-		C9018D6E1BFB89B700763D06 /* ppy_keyboard_grid_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D691BFB89B700763D06 /* ppy_keyboard_grid_bg@2x.png */; };
 		C9018D6F1BFB89B700763D06 /* ppy_keyboard_popup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D6A1BFB89B700763D06 /* ppy_keyboard_popup@2x.png */; };
 		C9018D711BFB89ED00763D06 /* ppy_keyboard_tools_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C9018D701BFB89ED00763D06 /* ppy_keyboard_tools_bg.png */; };
 		C9018D741BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.m in Sources */ = {isa = PBXBuildFile; fileRef = C9018D731BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.m */; };
@@ -26,6 +25,9 @@
 		C938217D1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C938217C1B511AF50036E216 /* MPEmojiKeyboardKeyGroup.m */; };
 		C93821801B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C938217F1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m */; };
 		C97059791BF249AF00124E6A /* MPEmojiKeyboardGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97059781BF249AF00124E6A /* MPEmojiKeyboardGroupView.m */; };
+		C9816C781C148BA0000BBE2F /* keyboard_grid_bg_6p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9816C751C148BA0000BBE2F /* keyboard_grid_bg_6p@2x.png */; };
+		C9816C791C148BA0000BBE2F /* keyboard_grid_bg_6s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9816C761C148BA0000BBE2F /* keyboard_grid_bg_6s@2x.png */; };
+		C9816C7A1C148BA0000BBE2F /* keyboard_grid_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9816C771C148BA0000BBE2F /* keyboard_grid_bg@2x.png */; };
 		C999C0601B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C999C05F1B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.m */; };
 		C99A341C1BF8E12600EABAF6 /* MPEmojiKeyboardPressedPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A341B1BF8E12600EABAF6 /* MPEmojiKeyboardPressedPopupView.m */; };
 		C99A341F1BF8E3D300EABAF6 /* MPEmojiKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A341E1BF8E3D300EABAF6 /* MPEmojiKeyboard.m */; };
@@ -53,7 +55,6 @@
 		C9018D661BFB89B700763D06 /* backspace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backspace@2x.png"; sourceTree = "<group>"; };
 		C9018D671BFB89B700763D06 /* ppy_keyboard_blue_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ppy_keyboard_blue_bg@2x.png"; sourceTree = "<group>"; };
 		C9018D681BFB89B700763D06 /* ppy_keyboard_gray_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ppy_keyboard_gray_bg@2x.png"; sourceTree = "<group>"; };
-		C9018D691BFB89B700763D06 /* ppy_keyboard_grid_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ppy_keyboard_grid_bg@2x.png"; sourceTree = "<group>"; };
 		C9018D6A1BFB89B700763D06 /* ppy_keyboard_popup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ppy_keyboard_popup@2x.png"; sourceTree = "<group>"; };
 		C9018D701BFB89ED00763D06 /* ppy_keyboard_tools_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ppy_keyboard_tools_bg.png; sourceTree = "<group>"; };
 		C9018D721BFB8FAD00763D06 /* MPEmojiKeyboardAppearence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardAppearence.h; path = MPEmojiKeyboard/MPEmojiKeyboardAppearence.h; sourceTree = "<group>"; };
@@ -79,6 +80,9 @@
 		C938217F1B511CC10036E216 /* MPEmojiKeyboardKeysFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardKeysFlowLayout.m; path = MPEmojiKeyboard/MPEmojiKeyboardKeysFlowLayout.m; sourceTree = "<group>"; };
 		C97059771BF249AF00124E6A /* MPEmojiKeyboardGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardGroupView.h; path = MPEmojiKeyboard/MPEmojiKeyboardGroupView.h; sourceTree = "<group>"; };
 		C97059781BF249AF00124E6A /* MPEmojiKeyboardGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardGroupView.m; path = MPEmojiKeyboard/MPEmojiKeyboardGroupView.m; sourceTree = "<group>"; };
+		C9816C751C148BA0000BBE2F /* keyboard_grid_bg_6p@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_grid_bg_6p@2x.png"; sourceTree = "<group>"; };
+		C9816C761C148BA0000BBE2F /* keyboard_grid_bg_6s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_grid_bg_6s@2x.png"; sourceTree = "<group>"; };
+		C9816C771C148BA0000BBE2F /* keyboard_grid_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_grid_bg@2x.png"; sourceTree = "<group>"; };
 		C999C05E1B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardKeyCell.h; path = MPEmojiKeyboard/MPEmojiKeyboardKeyCell.h; sourceTree = "<group>"; };
 		C999C05F1B5C0B2600EC74E2 /* MPEmojiKeyboardKeyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPEmojiKeyboardKeyCell.m; path = MPEmojiKeyboard/MPEmojiKeyboardKeyCell.m; sourceTree = "<group>"; };
 		C99A341A1BF8E12600EABAF6 /* MPEmojiKeyboardPressedPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPEmojiKeyboardPressedPopupView.h; path = MPEmojiKeyboard/MPEmojiKeyboardPressedPopupView.h; sourceTree = "<group>"; };
@@ -120,11 +124,13 @@
 		C9018D651BFB89B700763D06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C9816C751C148BA0000BBE2F /* keyboard_grid_bg_6p@2x.png */,
+				C9816C761C148BA0000BBE2F /* keyboard_grid_bg_6s@2x.png */,
+				C9816C771C148BA0000BBE2F /* keyboard_grid_bg@2x.png */,
 				C9018D701BFB89ED00763D06 /* ppy_keyboard_tools_bg.png */,
 				C9018D661BFB89B700763D06 /* backspace@2x.png */,
 				C9018D671BFB89B700763D06 /* ppy_keyboard_blue_bg@2x.png */,
 				C9018D681BFB89B700763D06 /* ppy_keyboard_gray_bg@2x.png */,
-				C9018D691BFB89B700763D06 /* ppy_keyboard_grid_bg@2x.png */,
 				C9018D6A1BFB89B700763D06 /* ppy_keyboard_popup@2x.png */,
 			);
 			path = Resources;
@@ -325,7 +331,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9816C7A1C148BA0000BBE2F /* keyboard_grid_bg@2x.png in Resources */,
 				C9018D6F1BFB89B700763D06 /* ppy_keyboard_popup@2x.png in Resources */,
+				C9816C791C148BA0000BBE2F /* keyboard_grid_bg_6s@2x.png in Resources */,
 				C9A53D911BFC1CAE00B82832 /* mp_keyboard_popup@2x.png in Resources */,
 				C9018D6C1BFB89B700763D06 /* ppy_keyboard_blue_bg@2x.png in Resources */,
 				C9018D6D1BFB89B700763D06 /* ppy_keyboard_gray_bg@2x.png in Resources */,
@@ -335,7 +343,7 @@
 				C938215C1B510FDC0036E216 /* Images.xcassets in Resources */,
 				C9A53D901BFC1CAE00B82832 /* mp_keyboard_backspace@2x.png in Resources */,
 				C9018D631BFA441800763D06 /* EmotionTextKeys.plist in Resources */,
-				C9018D6E1BFB89B700763D06 /* ppy_keyboard_grid_bg@2x.png in Resources */,
+				C9816C781C148BA0000BBE2F /* keyboard_grid_bg_6p@2x.png in Resources */,
 				C9018D6B1BFB89B700763D06 /* backspace@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
