@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -35,43 +34,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TMk-NX-FJo">
-                                <rect key="frame" x="7" y="78" width="587" height="156"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1z-r9-aTm">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="COK-Na-dEm">
+                                        <rect key="frame" x="8" y="5" width="538" height="40"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.70980392160000005" blue="0.8980392157" alpha="0.056904560810810814" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Z-7D-4Bp">
+                                        <rect key="frame" x="552" y="5" width="40" height="40"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Fsi-ek-EZ7"/>
+                                            <constraint firstAttribute="height" constant="40" id="Wzu-TB-wYm"/>
+                                        </constraints>
+                                        <state key="normal" image="chatBar_face"/>
+                                        <state key="selected" image="chatBar_keyboard"/>
+                                        <state key="highlighted" image="chatBar_faceSelected"/>
+                                        <connections>
+                                            <action selector="buttonDidClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GVY-Nu-id2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="156" id="lvd-XM-bbY"/>
+                                    <constraint firstItem="Q9Z-7D-4Bp" firstAttribute="top" secondItem="V1z-r9-aTm" secondAttribute="top" constant="5" id="Bwg-ea-Rbw"/>
+                                    <constraint firstAttribute="bottom" secondItem="COK-Na-dEm" secondAttribute="bottom" constant="5" id="F5h-hu-Zrq"/>
+                                    <constraint firstItem="COK-Na-dEm" firstAttribute="top" secondItem="V1z-r9-aTm" secondAttribute="top" constant="5" id="TaU-Gy-THm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q9Z-7D-4Bp" secondAttribute="trailing" constant="8" id="knS-mY-aSh"/>
+                                    <constraint firstItem="COK-Na-dEm" firstAttribute="leading" secondItem="V1z-r9-aTm" secondAttribute="leading" constant="8" id="loE-Gl-Z4v"/>
+                                    <constraint firstAttribute="height" constant="50" id="naH-NE-9fX"/>
+                                    <constraint firstItem="Q9Z-7D-4Bp" firstAttribute="leading" secondItem="COK-Na-dEm" secondAttribute="trailing" constant="6" id="zMV-Sj-qSw"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vu0-Wn-lLk">
-                                <rect key="frame" x="42" y="259" width="160" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="3N0-fe-QNI"/>
-                                    <constraint firstAttribute="height" constant="30" id="Oln-eQ-xFb"/>
-                                </constraints>
-                                <state key="normal" title="Change Keyboard"/>
-                                <connections>
-                                    <action selector="buttonDidClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="a0n-iA-ktu"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="TMk-NX-FJo" secondAttribute="trailing" constant="6" id="1xr-Up-tg1"/>
-                            <constraint firstItem="Vu0-Wn-lLk" firstAttribute="top" secondItem="TMk-NX-FJo" secondAttribute="bottom" constant="25" id="N2l-LB-cAO"/>
-                            <constraint firstItem="Vu0-Wn-lLk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="22" id="UMZ-YX-KSh"/>
-                            <constraint firstItem="TMk-NX-FJo" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="14" id="cnx-sJ-cgl"/>
-                            <constraint firstItem="TMk-NX-FJo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="7" id="eMd-R5-Car"/>
+                            <constraint firstAttribute="trailing" secondItem="V1z-r9-aTm" secondAttribute="trailing" id="AHB-AG-ePl"/>
+                            <constraint firstItem="V1z-r9-aTm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="TgD-Rf-W7N"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="V1z-r9-aTm" secondAttribute="bottom" id="lys-48-IFg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ec2-41-ISl"/>
                     <connections>
-                        <outlet property="textFile" destination="TMk-NX-FJo" id="QMt-A3-5M6"/>
+                        <outlet property="inputViewBottom" destination="lys-48-IFg" id="eOj-Dh-TLn"/>
+                        <outlet property="textView" destination="COK-Na-dEm" id="G2v-Vg-M8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -79,4 +91,9 @@
             <point key="canvasLocation" x="-56" y="323"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chatBar_face" width="72" height="72"/>
+        <image name="chatBar_faceSelected" width="72" height="72"/>
+        <image name="chatBar_keyboard" width="72" height="72"/>
+    </resources>
 </document>

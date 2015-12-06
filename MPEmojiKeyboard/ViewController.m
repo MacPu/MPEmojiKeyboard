@@ -10,25 +10,56 @@
 #import "MPEmojiKeyboardBuilder.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITextView *textFile;
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *inputViewBottom;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.title = @"MPEmojiKeyboard";
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillChangeFrame:)
+                                                 name:UIKeyboardWillChangeFrameNotification
+                                               object:nil];
 }
 
-- (IBAction)buttonDidClicked:(id)sender {
-    if(self.textFile.emojiKeyboard){
-        [self.textFile switchToDefaultKeyboard];
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    _textView.layer.cornerRadius = 5;
+    _textView.layer.masksToBounds = YES;
+}
+
+- (IBAction)buttonDidClicked:(UIButton *)sender
+{
+    [self.textView becomeFirstResponder];
+    sender.selected = !sender.selected;
+    if(self.textView.emojiKeyboard){
+        [self.textView switchToDefaultKeyboard];
     }
     else{
         MPEmojiKeyboard *keyboard = [MPEmojiKeyboardBuilder sharedKeyboard];
-        [_textFile switchToEmojiKeyboard:keyboard];
+        [_textView switchToEmojiKeyboard:keyboard];
     }
+}
+
+- (void)keyboardWillChangeFrame:(NSNotification *)notification
+{
+    NSDictionary*info=[notification userInfo];
+    CGFloat keyboardY=[[info objectForKey:UIKeyboardFrameEndUserInfoKey]CGRectValue].origin.y;
+    CGFloat keyboardAnimatoin = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    _inputViewBottom.constant = screenHeight - keyboardY;
+    [UIView animateWithDuration:keyboardAnimatoin animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    
 }
 
 @end
