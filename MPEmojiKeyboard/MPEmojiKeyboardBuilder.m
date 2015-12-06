@@ -82,7 +82,8 @@
         
         MPEmojiKeyboardKeyGroup *test1Group = [[MPEmojiKeyboardKeyGroup alloc] init];
         test1Group.keyItems = [MPEmojiKeyboardBuilder initEmojiItems];
-        test1Group.title = @"emoji";
+        test1Group.keyFont = [UIFont systemFontOfSize:27];
+        test1Group.title = @"😂";
         
         
         MPEmojiKeyboardKeysFlowLayout *textIconsLayout = [[MPEmojiKeyboardKeysFlowLayout alloc] init];
