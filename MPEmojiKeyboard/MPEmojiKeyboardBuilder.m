@@ -80,28 +80,32 @@
         sharedKeyboard = [MPEmojiKeyboard keyboard];
         sharedKeyboard.appearence = appearence;
         
+        //setup a image emoji group
         MPEmojiKeyboardKeyGroup *imageEmojiGroup = [[MPEmojiKeyboardKeyGroup alloc] init];
         imageEmojiGroup.keyItems = [self initImageKeyItems];
         imageEmojiGroup.iconImage = [UIImage imageNamed:@"001"];
         
+        //setup a emoji group
         MPEmojiKeyboardKeyGroup *test1Group = [[MPEmojiKeyboardKeyGroup alloc] init];
         test1Group.keyItems = [MPEmojiKeyboardBuilder initEmojiItems];
         test1Group.keyFont = [UIFont systemFontOfSize:27];
         test1Group.title = @"😂";
         
-        
+        //setup a text group layout
         MPEmojiKeyboardKeysFlowLayout *textIconsLayout = [[MPEmojiKeyboardKeysFlowLayout alloc] init];
         textIconsLayout.itemSize = CGSizeMake(SCREENWIDTH / 4, 142/3.0);
         textIconsLayout.itemSpacing = 0;
         textIconsLayout.lineSpacing = 0;
         textIconsLayout.contentInsets = UIEdgeInsetsMake(0,0,0,0);
         
+        // setup a text group
         MPEmojiKeyboardKeyGroup *textKeysGroup = [[MPEmojiKeyboardKeyGroup alloc] init];
         textKeysGroup.keyItems = [self initTextkeyItems];
         textKeysGroup.keyItemsLayout = textIconsLayout;
         textKeysGroup.keyItemCellClass = [MPEmojiKeyboardTextKeyCell class];
         textKeysGroup.title = @"(^_^)";
         
+        // set keybaord data source.
         sharedKeyboard.keysGroups = @[imageEmojiGroup ,test1Group, textKeysGroup];
         sharedKeyboard.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
         
