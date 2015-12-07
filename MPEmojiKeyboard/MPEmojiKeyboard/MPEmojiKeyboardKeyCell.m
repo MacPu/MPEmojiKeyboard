@@ -52,13 +52,13 @@
 - (void)setKeyItem:(MPEmojiKeyboardKeyItem *)keyItem
 {
     _keyItem = keyItem;
-    if(keyItem.title){
-        [self.keyButton setImage:nil forState:UIControlStateNormal];
-        [self.keyButton setTitle:keyItem.title forState:UIControlStateNormal];
-    }
-    else if(keyItem.emojiImage){
+    if(keyItem.emojiImage){
         [self.keyButton setImage:keyItem.emojiImage forState:UIControlStateNormal];
         [self.keyButton setTitle:nil forState:UIControlStateNormal];
+    }
+    else if(keyItem.title){
+        [self.keyButton setImage:nil forState:UIControlStateNormal];
+        [self.keyButton setTitle:keyItem.title forState:UIControlStateNormal];
     }
     else{
         [self.keyButton setImage:nil forState:UIControlStateNormal];

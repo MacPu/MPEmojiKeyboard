@@ -80,6 +80,10 @@
         sharedKeyboard = [MPEmojiKeyboard keyboard];
         sharedKeyboard.appearence = appearence;
         
+        MPEmojiKeyboardKeyGroup *imageEmojiGroup = [[MPEmojiKeyboardKeyGroup alloc] init];
+        imageEmojiGroup.keyItems = [self initImageKeyItems];
+        imageEmojiGroup.iconImage = [UIImage imageNamed:@"001"];
+        
         MPEmojiKeyboardKeyGroup *test1Group = [[MPEmojiKeyboardKeyGroup alloc] init];
         test1Group.keyItems = [MPEmojiKeyboardBuilder initEmojiItems];
         test1Group.keyFont = [UIFont systemFontOfSize:27];
@@ -98,7 +102,7 @@
         textKeysGroup.keyItemCellClass = [MPEmojiKeyboardTextKeyCell class];
         textKeysGroup.title = @"(^_^)";
         
-        sharedKeyboard.keysGroups = @[test1Group, textKeysGroup];
+        sharedKeyboard.keysGroups = @[imageEmojiGroup ,test1Group, textKeysGroup];
         sharedKeyboard.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
         
         [sharedKeyboard setKeyItemGroupPressedKeyChangedBlock:^(MPEmojiKeyboardKeyGroup *keyItemsGroup, MPEmojiKeyboardKeyCell *fromCell, MPEmojiKeyboardKeyCell *toCell){
@@ -122,6 +126,23 @@
         
     });
     return sharedKeyboard;
+}
+
++ (NSArray *)initImageKeyItems
+{
+    NSMutableArray *imagekeyItems = [[NSMutableArray alloc] init];
+    NSArray *imageKeys = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"EmojiIcons" ofType:@"plist"]];
+    for (NSDictionary *dic in imageKeys) {
+        NSString *title = [dic valueForKey:@"chs"];
+        NSString *imageString = [dic valueForKey:@"png"];
+        MPEmojiKeyboardKeyItem *item = [[MPEmojiKeyboardKeyItem alloc] init];
+        item.title = title;
+        item.emojiImage = [UIImage imageNamed:imageString];
+        item.textToInput = [NSString stringWithFormat:@"[:%@:]",title];
+        [imagekeyItems addObject:item];
+    }
+    
+    return imagekeyItems;
 }
 
 + (NSArray *)initEmojiItems
