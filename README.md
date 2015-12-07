@@ -1,9 +1,9 @@
 # MPEmojiKeyboard
 This is a very beautiful keyboard for iOS. You can use this custom any keyboard,not only emoji keyboard.
 ## Screen Shot
-![ScreenShot/1.pic.jpg](ScreenShot/1.pic.jpg)
-![ScreenShot/2.pic.jpg](ScreenShot/2.pic.jpg)
 ![ScreenShot/3.pic.jpg](ScreenShot/3.pic.jpg)
+![ScreenShot/2.pic.jpg](ScreenShot/2.pic.jpg)
+![ScreenShot/1.pic.jpg](ScreenShot/1.pic.jpg)
 
 ## Quick Start
 there is a demo project, you can find how to use this in MPEmojiKeyboardBuilder.m file.
